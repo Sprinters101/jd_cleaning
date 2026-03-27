@@ -1,11 +1,21 @@
 import Container from "../common/Container";
-import Navbar from "../common/Navbar";
-import Button from "../ui/Button";
 
 const Hero = () => {
     return (
-        <div>
-            <Navbar />
+        <div className="">
+            <Container padding>
+                <div
+                    className={`bg-[url("/images/hero.png")] bg-cover md:bg-center  bg-no-repeat h-149.25 rounded-[2.5rem]  md:h-228.25 flex items-center px-6 md:px-16`}
+                >
+                    <div className="">
+                        <img
+                            src="/images/googleRate.png"
+                            alt="google rate"
+                            className="w-53.75"
+                        />
+                    </div>
+                </div>
+            </Container>
         </div>
     );
 };

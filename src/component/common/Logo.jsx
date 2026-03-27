@@ -1,8 +1,8 @@
 const Logo = () => {
     return (
-        <div>
-            <img src="/images/logo.png" alt=" J&D logo" className="size-10.5" />
-            <p className="font-poltawski text-[20px] text-grey-darker  ">
+        <div className="flex items-center justify-center gap-2 w-fit">
+            <img src="/images/logo.png" alt=" J&D logo" className="w-11 h-11" />
+            <p className="font-poltawski font-bold text-sm md:text-[20px] text-grey-darker  tracking-[-0.5px]">
                 J&D Carpet Cleaning
             </p>
         </div>
