@@ -142,7 +142,7 @@ const Navbar = () => {
 
             {/* Bottom Slide-up Drawer for Mobile */}
             {isOpen && (
-                <div className="absolute top-18  h-fit inset-0 bg-white z-60 md:hidden flex flex-col">
+                <div className="fixed top-18  h-fit inset-0 bg-white z-60 md:hidden flex flex-col">
                     {/* Header with Logo and Close Button */}
 
                     {/* Navigation Links */}
@@ -174,6 +174,7 @@ const Navbar = () => {
                             className="w-full py-1.5 rounded-full flex items-center justify-center gap-2"
                             onClick={() => setIsOpen(false)}
                             icon={"arrow"}
+                            isInverse={true}
                         >
                             Book us Now
                         </Button>
