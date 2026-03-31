@@ -3,13 +3,20 @@
 @import "tailwindcss";
 
 @theme {
-    --color-blue-normal: "#268BCA";
-    --color-blue-light-hover: "#DEEEF7";
-    --color-blue-light-active: "#BCDBEF";
-    ---color-grey: "#333333";
-    --color-grey-light: "#F2F4F7";
-    --color-grey-darker: "#121212";
-    ---color-neutral: "#191C1E";
+    --color-blue-normal: #268BCA;
+    --color-blue-light: #E9F3FA;
+    --color-blue-light-hover: #DEEEF7;
+    --color-blue-light-active: #BCDBEF;
+
+    --color-grey: #333333;
+    --color-grey-light: #F2F4F7;
+    --color-grey-darker: #121212;
+
+    --color-neutral: #191C1E;
+
+    --color-dark: #0C0C0C;
+
+    --color-gold: #FBBC04;
 
 
     /* fonts */
@@ -17,6 +24,15 @@
     --font-poppins: "Poppins", sans-serif;
 }
 
+* {
+    /* border: 1px solid red; */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 
 .poltawski-nowy {
     font-family: "Poltawski Nowy", serif;
@@ -29,4 +45,12 @@
     font-family: "Poppins", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+.isCentered {
+    @apply flex items-center justify-center;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
 }

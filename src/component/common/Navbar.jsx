@@ -4,6 +4,8 @@ import { cn } from "../../lib/utils";
 import Container from "./Container";
 import Button from "../ui/Button";
 import Logo from "./Logo";
+import { HiMenu } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -59,17 +61,19 @@ const Navbar = () => {
         return () => observer.disconnect();
     }, []);
 
+    const toggleNav = () => {
+        setIsOpen(!isOpen);
+    };
     return (
         <>
             {/* Main Navbar */}
-            <nav className="bg-white border-b sticky top-0 z-50">
+            <nav className="bg-white sticky top-0 z-50">
                 <Container>
-                    <div className="flex items-center justify-between h-16 lg:h-20">
+                    <div className="flex items-center justify-between h-18 md:h-24">
                         {/* Logo */}
+                        {/* <Logo /> */}
 
-                        <div className="hidden sm:block">
-                            <Logo />
-                        </div>
+                        <Logo />
 
                         {/* Desktop Navigation with Active Dot */}
                         <div className="hidden md:flex items-center gap-10">
@@ -81,10 +85,9 @@ const Navbar = () => {
                                         handleNavClick(e, link.href, link.id)
                                     }
                                     className={cn(
-                                        "relative font-medium transition-colors pb-1 group",
-                                        activeSection === link.id
-                                            ? "text-blue-600"
-                                            : "text-gray-600 hover:text-gray-900",
+                                        "relative leading-[100%]  font-poppins font-normal text-[0.9375rem] transition-colors pb-1 group text-grey",
+                                        activeSection === link.id &&
+                                            "text-blue-normal font-bold",
                                     )}
                                 >
                                     {link.name}
@@ -92,10 +95,10 @@ const Navbar = () => {
                                     {/* Active Dot Indicator */}
                                     <span
                                         className={cn(
-                                            "absolute bottom-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-blue-600 transition-all duration-200",
+                                            "absolute block bottom-0 left-1/2 -translate-x-1/2 w-1.75 h-1.75 rounded-full bg-blue-normal transition-all duration-200",
                                             activeSection === link.id
-                                                ? "opacity-100 scale-100"
-                                                : "opacity-0 scale-0 group-hover:opacity-30 group-hover:scale-75",
+                                                ? "opacity-100 "
+                                                : "opacity-0 scale-0 group-hover:opacity-30 ",
                                         )}
                                     />
                                 </a>
@@ -103,36 +106,34 @@ const Navbar = () => {
                         </div>
 
                         {/* Desktop Right Side */}
-                        <div className="hidden md:flex items-center gap-4">
+                        <div className="hidden lg:flex items-center gap-4">
                             <a
                                 href="tel:+18316826739"
-                                className="text-blue-600 font-medium hover:text-blue-700 transition-colors"
+                                className="transition-colors"
                             >
-                                (831) 682-6739
+                                <Button icon={"phone"}>(831) 682-6739</Button>
                             </a>
-                            <Button variant="primary">Book Now</Button>
+
+                            <Button
+                                variant="primary"
+                                className="px-8"
+                                icon={"arrow"}
+                            >
+                                Book us Now
+                            </Button>
                         </div>
 
                         {/* Mobile Hamburger */}
                         <button
-                            onClick={() => setIsOpen(true)}
-                            className="md:hidden p-2 text-gray-700"
+                            onClick={() => toggleNav()}
+                            className="md:hidden bg-blue-normal rounded-full  w-7 h-7 justify-center items-center flex text-white"
                             aria-label="Open menu"
                         >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="w-6 h-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M4 6h16M4 12h16M4 18h16"
-                                />
-                            </svg>
+                            {isOpen ? (
+                                <IoClose className="text-lg" />
+                            ) : (
+                                <HiMenu className="text-lg" />
+                            )}
                         </button>
                     </div>
                 </Container>
@@ -140,79 +141,50 @@ const Navbar = () => {
 
             {/* Bottom Slide-up Drawer for Mobile */}
             {isOpen && (
-                <div className="fixed inset-0 z-[60] md:hidden">
-                    {/* Backdrop */}
-                    <div
-                        className="absolute inset-0 bg-black/60"
-                        onClick={() => setIsOpen(false)}
-                    />
+                <div className="fixed top-18  h-fit inset-0 bg-white z-60 md:hidden flex flex-col">
+                    {/* Header with Logo and Close Button */}
 
-                    {/* Drawer */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl max-h-[85vh] overflow-auto shadow-2xl">
-                        <div className="p-6">
-                            {/* Handle */}
-                            <div className="flex justify-center mb-8">
-                                <div className="w-12 h-1.5 bg-gray-300 rounded-full" />
-                            </div>
+                    {/* Navigation Links */}
+                    <div className=" flex flex-col px-6 gap-4 text-lg">
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                onClick={(e) =>
+                                    handleNavClick(e, link.href, link.id)
+                                }
+                                className={cn(
+                                    "py-3 font-medium transition-colors text-[0.9375rem]",
+                                    activeSection === link.id
+                                        ? "text-blue-normal font-bold"
+                                        : "text-grey",
+                                )}
+                            >
+                                {link.name}
+                            </a>
+                        ))}
+                    </div>
 
-                            {/* Logo */}
-                            <div className="flex items-center gap-3 mb-10">
-                                <div className="w-10 h-10 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-bold text-3xl">
-                                    J&D
-                                </div>
-                                <div>
-                                    <span className="font-bold text-2xl">
-                                        J&D
-                                    </span>
-                                    <p className="text-gray-500 -mt-1">
-                                        Carpet Cleaning
-                                    </p>
-                                </div>
-                            </div>
+                    {/* Footer Actions */}
+                    <div className="p-6  space-y-4">
+                        <Button
+                            variant="primary"
+                            size="lg"
+                            className="w-full py-1.5 rounded-full flex items-center justify-center gap-2"
+                            onClick={() => setIsOpen(false)}
+                            icon={"arrow"}
+                            isInverse={true}
+                        >
+                            Book us Now
+                        </Button>
 
-                            {/* Mobile Links */}
-                            <div className="flex flex-col gap-2 mb-12">
-                                {navLinks.map((link) => (
-                                    <a
-                                        key={link.name}
-                                        href={link.href}
-                                        onClick={(e) =>
-                                            handleNavClick(
-                                                e,
-                                                link.href,
-                                                link.id,
-                                            )
-                                        }
-                                        className={cn(
-                                            "py-4 px-5 text-lg font-medium rounded-2xl transition-all",
-                                            activeSection === link.id
-                                                ? "bg-blue-50 text-blue-700"
-                                                : "hover:bg-gray-100 text-gray-700",
-                                        )}
-                                    >
-                                        {link.name}
-                                    </a>
-                                ))}
-                            </div>
-
-                            {/* Contact & CTA */}
-                            <div className="space-y-4">
-                                <a
-                                    href="tel:+18316826739"
-                                    className="flex items-center justify-center gap-3 bg-blue-50 hover:bg-blue-100 text-blue-700 py-4 rounded-2xl font-semibold text-lg transition-colors"
-                                >
-                                    📞 Call (831) 682-6739
-                                </a>
-
-                                <Button
-                                    variant="primary"
-                                    size="lg"
-                                    className="w-full py-4 text-lg"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    Book Now
-                                </Button>
-                            </div>
+                        <div className="flex items-center justify-center gap-4">
+                            <a
+                                href="tel:+18316826739"
+                                className="transition-colors"
+                            >
+                                <Button icon={"phone"}>(831) 682-6739</Button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -222,3 +194,82 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// {isOpen && (
+//     <div className="fixed inset-0 z-60 md:hidden">
+//         {/* Backdrop */}
+//         <div
+//             className="absolute inset-0 bg-black/60"
+//             onClick={() => setIsOpen(false)}
+//         />
+
+//         {/* Drawer */}
+//         <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl max-h-[85vh] overflow-auto shadow-2xl">
+//             <div className="p-6">
+//                 {/* Handle */}
+//                 <div className="flex justify-center mb-8">
+//                     <div className="w-12 h-1.5 bg-gray-300 rounded-full" />
+//                 </div>
+
+//                 {/* Logo */}
+//                 <div className="flex items-center gap-3 mb-10">
+//                     <div className="w-10 h-10 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-bold text-3xl">
+//                         J&D
+//                     </div>
+//                     <div>
+//                         <span className="font-bold text-2xl">
+//                             J&D
+//                         </span>
+//                         <p className="text-gray-500 -mt-1">
+//                             Carpet Cleaning
+//                         </p>
+//                     </div>
+//                 </div>
+
+//                 {/* Mobile Links */}
+//                 <div className="flex flex-col gap-2 mb-12">
+//                     {navLinks.map((link) => (
+//                         <a
+//                             key={link.name}
+//                             href={link.href}
+//                             onClick={(e) =>
+//                                 handleNavClick(
+//                                     e,
+//                                     link.href,
+//                                     link.id,
+//                                 )
+//                             }
+//                             className={cn(
+//                                 "py-4 px-5 text-lg font-medium rounded-2xl transition-all",
+//                                 activeSection === link.id
+//                                     ? "bg-blue-50 text-blue-700"
+//                                     : "hover:bg-gray-100 text-gray-700",
+//                             )}
+//                         >
+//                             {link.name}
+//                         </a>
+//                     ))}
+//                 </div>
+
+//                 {/* Contact & CTA */}
+//                 <div className="space-y-4">
+//                     <a
+//                         href="tel:+18316826739"
+//                         className="flex items-center justify-center gap-3 bg-blue-50 hover:bg-blue-100 text-blue-700 py-4 rounded-2xl font-semibold text-lg transition-colors"
+//                     >
+//                         📞 Call (831) 682-6739
+//                     </a>
+
+//                     <Button
+//                         variant="primary"
+//                         size="lg"
+//                         className="w-full py-4 text-lg"
+//                         onClick={() => setIsOpen(false)}
+//                     >
+//                         Book Now
+//                     </Button>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// )}
