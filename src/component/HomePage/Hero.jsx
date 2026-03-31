@@ -22,7 +22,7 @@ const Hero = () => {
                                 variant="h1"
                             >
                                 Professional Cleaning Backed by Care &
-                                Experience
+                                Experience{" "}
                                 <img
                                     src="/images/borderLine.png"
                                     alt="border line"
