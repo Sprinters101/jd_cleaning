@@ -4,7 +4,6 @@ import { cn } from "../../lib/utils";
 import Container from "./Container";
 import Button from "../ui/Button";
 import Logo from "./Logo";
-import { CgMenuLeftAlt } from "react-icons/cg";
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 
