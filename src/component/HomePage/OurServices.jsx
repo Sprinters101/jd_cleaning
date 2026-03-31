@@ -4,8 +4,6 @@ import Text from "../common/Text";
 import Button from "../ui/Button";
 
 const OurServices = () => {
-    // src/data/services.js
-
     const servicesData = [
         {
             id: 1,
@@ -51,7 +49,7 @@ const OurServices = () => {
                     {servicesData?.map(({ id, desc, title }) => {
                         return (
                             <div
-                                className="group rounded-[1.25rem] max-w-[320px] md:max-w-full mx-auto transition-all h-117.25 overflow-hidden relative"
+                                className="group rounded-[1.25rem] max-w-[20rem] md:max-w-full mx-auto transition-all h-117.25 overflow-hidden relative"
                                 key={id}
                             >
                                 <img

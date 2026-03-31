@@ -3,7 +3,7 @@ import Container from "./Container";
 import Logo from "./Logo";
 import Text from "./Text";
 import { LuFacebook } from "react-icons/lu";
-import { PiTiktokLogo, PiWhatsappLogo } from "react-icons/pi";
+import { PiTiktokLogo } from "react-icons/pi";
 import { FaInstagram } from "react-icons/fa";
 import { SiGoogle } from "react-icons/si";
 
@@ -16,12 +16,12 @@ const Footer = () => {
                     <div className="">
                         <Logo />
                         <Text
-                            className="mt-[1.375rem] w-[24.1875rem] text-grey"
+                            className="mt-5.5 w-96.75 text-grey"
                             variant="b3_regular"
                         >
                             {footerData?.company?.description}
                         </Text>
-                        <div className="flex gap-5 mt-[22px]">
+                        <div className="flex gap-5 mt-5.5">
                             {footerData.social.map((social) => (
                                 <a
                                     key={social.name}

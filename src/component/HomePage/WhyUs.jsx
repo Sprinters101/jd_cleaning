@@ -43,7 +43,7 @@ const WhyUs = () => {
                             <Text className="text-blue-normal" variant="h2">
                                 100%
                             </Text>
-                            <Text className="mt-1 text-grey  text-[10px] md:text-[15px]">
+                            <Text className="mt-1 text-grey  text-[0.625rem] md:text-[0.9375rem]">
                                 Customer satisfaction guaranteed in every visit.
                             </Text>
                         </div>

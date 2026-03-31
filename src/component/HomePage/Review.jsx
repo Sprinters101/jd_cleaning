@@ -53,7 +53,7 @@ const Review = () => {
                         </div>
                     </div>
 
-                    <div className=" max-w-[398px] text-center w-full shrink-0 order-1 md:order-2  ">
+                    <div className=" max-w-99.5 text-center w-full shrink-0 order-1 md:order-2  ">
                         <Text
                             variant="b1_semibold"
                             className="text-blue-normal"
@@ -93,14 +93,14 @@ const ReviewCard = ({ className, data }) => {
     return (
         <div
             className={cn(
-                "py-6.5 md:py-[47px] max-w-[26rem]  w-full relative overflow-hidden px-4.75 bg-blue-light border rounded-[0.625rem] border-blue-light-active",
+                "py-6.5 md:py-11.75 max-w-104  w-full relative overflow-hidden px-4.75 bg-blue-light border rounded-[0.625rem] border-blue-light-active",
                 className,
             )}
         >
             <img
                 src="/images/qoute.png"
                 alt="quote"
-                className="absolute top-0 -right-[51px] md:right-4.75 w-[85px]"
+                className="absolute top-0 -right-12.75 md:right-4.75 w-21.25"
             />
 
             <div className="flex items-center gap-3">

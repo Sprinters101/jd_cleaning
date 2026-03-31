@@ -25,14 +25,14 @@ const Contact = () => {
         },
     ];
     return (
-        <div className="py-8 md:py-[104px]">
+        <div className="py-8 md:py-26">
             <Container>
                 <div
                     className={cn(
                         `bg-grey-light w-full flex flex-col md:flex-row rounded-[1.875rem] md:bg-[url("/images/contactPattern.png")] bg-right bg-no-repeat`,
                     )}
                 >
-                    <div className="p-5 md:p-12 w-full max-w-[550px]">
+                    <div className="p-5 md:p-12 w-full max-w-137.5">
                         <div className=" text-center md:text-left">
                             <Text
                                 variant="b1_bold"
@@ -82,7 +82,7 @@ const Contact = () => {
                             `bg-[url("/images/miniContactPattern.png")] md:bg-none bg-right bg-no-repeat`,
                         )}
                     >
-                        <div className="mt-[31px] flex md:hidden items-center justify-center">
+                        <div className="mt-7.75 flex md:hidden items-center justify-center">
                             <Button variant="primary" icon={"arrow"}>
                                 Get a Free Quote Today
                             </Button>
