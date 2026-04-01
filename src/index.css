@@ -22,6 +22,19 @@
     /* fonts */
     --font-poltawski: "Poltawski Nowy", serif;
     --font-poppins: "Poppins", sans-serif;
+
+    /* animation */
+    --animate-slow-zoom: slowZoom 1s ease-in-out;
+
+    @keyframes slowZoom {
+        from {
+            transform: scale(1.1);
+        }
+
+        to {
+            transform: scale(1.0);
+        }
+    }
 }
 
 * {
@@ -53,4 +66,15 @@ body {
 
 ::-webkit-scrollbar {
     width: 0px;
+}
+
+
+@keyframes slowZoom {
+    from {
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(1.0);
+    }
 }

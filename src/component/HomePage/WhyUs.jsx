@@ -1,29 +1,30 @@
 import React from "react";
 import Container from "../common/Container";
 import Text from "../common/Text";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const WhyUs = () => {
     const whyChooseData = [
         {
-            id: 1,
+            id: 100,
             number: "01",
             title: "4+ Years of Proven Cleaning Experience",
             subtitle: "Residential & commercial expertise",
         },
         {
-            id: 2,
+            id: 200,
             number: "02",
             title: "Family-Owned Business You Can Trust",
             subtitle: "James & Delmi built this on trust",
         },
         {
-            id: 3,
+            id: 300,
             number: "03",
             title: "Eco-Friendly & Professional",
             subtitle: "Green products, pro equipment",
         },
         {
-            id: 4,
+            id: 400,
             number: "04",
             title: "Bilingual Service",
             subtitle: "English and Spanish languages",
@@ -39,14 +40,18 @@ const WhyUs = () => {
                             alt="A cleaner cleaning "
                             className="w-full h-full object-cover max-h-full rounded-4xl"
                         />
-                        <div className=" max-w-47.5 md:max-w-65.5 w-full bg-white rounded-3xl p-8 absolute -bottom-10 md:-bottom-15 right-11.75 md:right-16">
-                            <Text className="text-blue-normal" variant="h2">
-                                100%
-                            </Text>
-                            <Text className="mt-1 text-grey  text-[0.625rem] md:text-[0.9375rem]">
-                                Customer satisfaction guaranteed in every visit.
-                            </Text>
-                        </div>
+
+                        <Slide className=" max-w-47.5 md:max-w-65.5 w-full bg-white rounded-3xl p-8 absolute -bottom-10 md:-bottom-15 right-11.75 md:right-16">
+                            <>
+                                <Text className="text-blue-normal" variant="h2">
+                                    100%
+                                </Text>
+                                <Text className="mt-1 text-grey  text-[0.625rem] md:text-[0.9375rem]">
+                                    Customer satisfaction guaranteed in every
+                                    visit.
+                                </Text>
+                            </>
+                        </Slide>
                     </div>
 
                     <div className="w-full max-w-181.75">
@@ -70,31 +75,36 @@ const WhyUs = () => {
                                 </div>
 
                                 {whyChooseData.map((item) => (
-                                    <div
+                                    <Slide
                                         key={item.id}
-                                        className="flex gap-8 md:gap-14 items-center relative md:p-5.75"
+                                        direction="down"
+                                        delay={item?.id}
                                     >
-                                        {/* Number Circle */}
-                                        <div className="shrink-0 size-10 md:size-16 rounded-full bg-blue-light-hover text-blue-normal isCentered font-bold text-[1.1875rem] md:text-[1.875rem]">
-                                            {item.number}
-                                        </div>
+                                        <Fade key={item.id} delay={item?.id}>
+                                            <div className="flex gap-8 md:gap-14 items-center relative md:p-5.75">
+                                                {/* Number Circle */}
+                                                <div className="shrink-0 size-10 md:size-16 rounded-full bg-blue-light-hover text-blue-normal isCentered font-bold text-[1.1875rem] md:text-[1.875rem]">
+                                                    {item.number}
+                                                </div>
 
-                                        {/* Content */}
-                                        <div className="pt-1 text-neutral">
-                                            <Text
-                                                variant="b2_semibold"
-                                                className="font-semibold"
-                                            >
-                                                {item.title}
-                                            </Text>
-                                            <Text
-                                                variant="b3_regular"
-                                                className="text-grey mt-2"
-                                            >
-                                                {item.subtitle}
-                                            </Text>
-                                        </div>
-                                    </div>
+                                                {/* Content */}
+                                                <div className="pt-1 text-neutral">
+                                                    <Text
+                                                        variant="b2_semibold"
+                                                        className="font-semibold"
+                                                    >
+                                                        {item.title}
+                                                    </Text>
+                                                    <Text
+                                                        variant="b3_regular"
+                                                        className="text-grey mt-2"
+                                                    >
+                                                        {item.subtitle}
+                                                    </Text>
+                                                </div>
+                                            </div>
+                                        </Fade>
+                                    </Slide>
                                 ))}
                             </div>
                         </div>

@@ -2,6 +2,7 @@ import { FaStar } from "react-icons/fa6";
 import Container from "../common/Container";
 import Text from "../common/Text";
 import { cn } from "../../lib/utils";
+import { Fade } from "react-awesome-reveal";
 
 const Review = () => {
     const reviewsData = [
@@ -11,6 +12,7 @@ const Review = () => {
             initials: "JC",
             rating: 5,
             text: "We scheduled with J&D for when we were on vacation. Ashley was prompt, communication was excellent. We came back to a home that smelled so fresh and clean. It’s hard to find good help these days, but you have an excellent company to work with. Thank you Ashley!",
+            delay: 0,
         },
         {
             id: 2,
@@ -32,6 +34,7 @@ const Review = () => {
             initials: "LT",
             rating: 5,
             text: "Ashley was very knowledgeable and friendly. The price was very reasonable. My carpets look beautiful and I highly recommend J&D Carpet Cleaning to do all your carpets.",
+            delay: 100,
         },
     ];
     return (
@@ -39,46 +42,60 @@ const Review = () => {
             <Container>
                 <div className="flex items-center justify-center gap-3.25 flex-col md:flex-row  ">
                     <div className="w-full order-2 md:order-1 flex justify-center flex-col gap-2.5 items-center md:items-stretch ">
-                        <div className="md:flex md:justify-end">
-                            <ReviewCard
-                                data={reviewsData?.[0]}
-                                className={""}
-                            />
-                        </div>{" "}
-                        <div className="md:flex md:justify-start lg:-mt-8">
-                            <ReviewCard
-                                data={reviewsData?.[1]}
-                                className={""}
-                            />
-                        </div>
+                        <Fade delay={100} duration={1000}>
+                            <div className="md:flex md:justify-end">
+                                <ReviewCard
+                                    data={reviewsData?.[0]}
+                                    className={""}
+                                />
+                            </div>{" "}
+                        </Fade>
+                        <Fade delay={900} duration={2000}>
+                            <div className="md:flex md:justify-start lg:-mt-8">
+                                <ReviewCard
+                                    data={reviewsData?.[1]}
+                                    className={""}
+                                />
+                            </div>
+                        </Fade>
                     </div>
-
                     <div className=" max-w-99.5 text-center w-full shrink-0 order-1 md:order-2  ">
-                        <Text
-                            variant="b1_semibold"
-                            className="text-blue-normal"
-                        >
-                            OUR REVIEWS
-                        </Text>
-                        <Text variant="h2" className="text-neutral mt-4">
-                            What Our <br className="hidden md:block" /> Clients
-                            Say
-                        </Text>
+                        <Fade delay={200} duration={1000}>
+                            <>
+                                <Text
+                                    variant="b1_semibold"
+                                    className="text-blue-normal"
+                                >
+                                    OUR REVIEWS
+                                </Text>
+                                <Text
+                                    variant="h2"
+                                    className="text-neutral mt-4"
+                                >
+                                    What Our <br className="hidden md:block" />{" "}
+                                    Clients Say
+                                </Text>
+                            </>
+                        </Fade>
                     </div>
 
                     <div className="w-full  order-3 md:order-3  flex justify-center items-center md:items-stretch flex-col gap-2.5">
-                        <div className="md:flex md:justify-start">
-                            <ReviewCard
-                                data={reviewsData?.[2]}
-                                className={""}
-                            />
-                        </div>{" "}
-                        <div className="md:flex md:justify-end lg:-mt-8">
-                            <ReviewCard
-                                data={reviewsData?.[3]}
-                                className={""}
-                            />
-                        </div>
+                        <Fade delay={1900} duration={2000}>
+                            <div className="md:flex md:justify-start">
+                                <ReviewCard
+                                    data={reviewsData?.[2]}
+                                    className={""}
+                                />
+                            </div>{" "}
+                        </Fade>
+                        <Fade delay={500} duration={2000}>
+                            <div className="md:flex md:justify-end lg:-mt-8">
+                                <ReviewCard
+                                    data={reviewsData?.[3]}
+                                    className={""}
+                                />
+                            </div>
+                        </Fade>
                     </div>
                 </div>
             </Container>
