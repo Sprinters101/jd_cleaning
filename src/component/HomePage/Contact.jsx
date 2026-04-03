@@ -5,6 +5,7 @@ import Button from "../ui/Button";
 import Text from "../common/Text";
 import { IoCallOutline, IoTimeOutline } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
+import { Fade } from "react-awesome-reveal";
 
 const Contact = () => {
     const contactData = [
@@ -26,55 +27,62 @@ const Contact = () => {
     ];
     return (
         <div className="py-8 md:py-26">
-            <Container>
+            <Container className="overflow-hidden">
                 <div
                     className={cn(
-                        `bg-grey-light w-full flex flex-col md:flex-row rounded-[1.875rem] md:bg-[url("/images/contactPattern.png")] bg-right bg-no-repeat`,
+                        `bg-grey-light w-full flex items-end flex-col md:flex-row rounded-[1.875rem] md:bg-[url("/images/contactPattern.png")] bg-right bg-no-repeat`,
                     )}
                 >
                     <div className="p-5 md:p-12 w-full max-w-137.5">
-                        <div className=" text-center md:text-left">
-                            <Text
-                                variant="b1_bold"
-                                className=" text-neutral font-bold "
-                            >
-                                Ready for a Cleaner, <br /> Healthier Home?
-                            </Text>
-                            <Text
-                                variant="b3_regular"
-                                className="text-grey mt-2 max-w-111"
-                            >
-                                Our team is standing by to provide a custom
-                                quote tailored to your specific needs.
-                            </Text>
-                        </div>
-                        <div className="mt-6 md:mt-6 space-y-4">
-                            {contactData?.map((item) => {
-                                return (
-                                    <div
-                                        className="flex gap-4"
-                                        key={item?.title}
+                        <Fade direction="left">
+                            <>
+                                <div className=" text-center md:text-left">
+                                    <Text
+                                        variant="b1_bold"
+                                        className=" text-neutral font-bold "
                                     >
-                                        <div className="size-12 text-[1.5rem] text-blue-normal bg-blue-light-hover isCentered rounded-full">
-                                            {item?.icon}
-                                        </div>
-                                        <div className="">
-                                            <Text className="text-[0.625rem] md:text-xs text-grey">
-                                                {item?.title}
-                                            </Text>
-                                            <Text className="mt-1 font-medium text-[0.9375rem] md:text-[1.1875rem] text-neutral">
-                                                {item?.value}
-                                            </Text>
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                        <div className="mt-10 hidden md:block ">
-                            <Button variant="primary" icon={"arrow"}>
-                                Get a Free Quote Today
-                            </Button>
-                        </div>
+                                        Ready for a Cleaner, <br /> Healthier
+                                        Home?
+                                    </Text>
+                                    <Text
+                                        variant="b3_regular"
+                                        className="text-grey mt-2 max-w-111"
+                                    >
+                                        Our team is standing by to provide a
+                                        custom quote tailored to your specific
+                                        needs.
+                                    </Text>
+                                </div>
+
+                                <div className="mt-6 md:mt-6 space-y-4">
+                                    {contactData?.map((item) => {
+                                        return (
+                                            <div
+                                                className="flex gap-4"
+                                                key={item?.title}
+                                            >
+                                                <div className="size-12 text-[1.5rem] text-blue-normal bg-blue-light-hover isCentered rounded-full">
+                                                    {item?.icon}
+                                                </div>
+                                                <div className="">
+                                                    <Text className="text-[0.625rem] md:text-xs text-grey">
+                                                        {item?.title}
+                                                    </Text>
+                                                    <Text className="mt-1 font-medium text-[0.9375rem] md:text-[1.1875rem] text-neutral">
+                                                        {item?.value}
+                                                    </Text>
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                                <div className="mt-10 hidden md:block ">
+                                    <Button variant="primary" icon={"arrow"}>
+                                        Get a Free Quote Today
+                                    </Button>
+                                </div>
+                            </>
+                        </Fade>
                     </div>
 
                     <div
@@ -87,11 +95,14 @@ const Contact = () => {
                                 Get a Free Quote Today
                             </Button>
                         </div>
-                        <img
-                            src="/images/cleaner.png"
-                            alt="cleaning tools"
-                            className=""
-                        />
+
+                        <Fade direction="up" style={{ overflow: "hidden" }}>
+                            <img
+                                src="/images/cleaner.png"
+                                alt="cleaning tools"
+                                className=""
+                            />
+                        </Fade>
                     </div>
                 </div>
             </Container>

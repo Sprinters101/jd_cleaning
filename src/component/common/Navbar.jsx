@@ -6,6 +6,8 @@ import Button from "../ui/Button";
 import Logo from "./Logo";
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
+import AnimatedSection from "../animation/AnimatedSection";
+import { Slide } from "react-awesome-reveal";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +67,7 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
     return (
-        <>
+        <Slide direction="down" triggerOnce>
             {/* Main Navbar */}
             <nav className="bg-white sticky top-0 z-50">
                 <Container>
@@ -189,7 +191,7 @@ const Navbar = () => {
                     </div>
                 </div>
             )}
-        </>
+        </Slide>
     );
 };
 

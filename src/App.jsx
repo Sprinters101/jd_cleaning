@@ -1,12 +1,12 @@
-// import Footer from "./component/common/Footer";
 import Navbar from "./component/common/Navbar";
-// import Contact from "./component/HomePage/Contact";
 import Hero from "./component/HomePage/Hero";
-// import OurGallery from "./component/HomePage/OurGallery";
 import OurServices from "./component/HomePage/OurServices";
-// import OurStory from "./component/HomePage/OurStory";
-// import Review from "./component/HomePage/Review";
 import WhyUs from "./component/HomePage/WhyUs";
+import Footer from "./component/common/Footer";
+import Contact from "./component/HomePage/Contact";
+import OurGallery from "./component/HomePage/OurGallery";
+import OurStory from "./component/HomePage/OurStory";
+import Review from "./component/HomePage/Review";
 
 function App() {
     return (
@@ -15,11 +15,11 @@ function App() {
             <Hero />
             <OurServices />
             <WhyUs />
-            {/* <OurGallery />
+            <OurGallery />
             <OurStory />
             <Review />
             <Contact />
-            <Footer /> */}
+            <Footer />
         </>
     );
 }
