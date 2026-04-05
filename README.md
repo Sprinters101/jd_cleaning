@@ -1,6 +1,6 @@
 # J&D Carpet Cleaning
 
-![J&D Carpet Cleaning Landing Page](https://via.placeholder.com/1200x600/0A66C2/FFFFFF?text=J%26D+Carpet+Cleaning+Landing+Page)
+![J&D Carpet Cleaning Landing Page](https://jd-cleaning.vercel.app/images/preview.png)
 
 A modern, professional, and fully responsive landing page for **J&D Carpet Cleaning** — a family-owned carpet and floor cleaning service based in Salinas, CA.
 
