@@ -12,6 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import BackToTop from "./component/common/BackToTop";
+import Preview from "./component/ui/Preview";
 
 function App() {
     useEffect(() => {
@@ -38,6 +39,7 @@ function App() {
             <Contact />
             <Footer />
             <BackToTop />
+            {/* <Preview /> */}
         </>
     );
 }

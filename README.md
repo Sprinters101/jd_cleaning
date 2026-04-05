@@ -1,16 +1,34 @@
-# React + Vite
+# J&D Carpet Cleaning
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![J&D Carpet Cleaning Landing Page](https://github.com/Sprinters101/jd_cleaning/blob/dev/public/images/preview.png?raw=true)
 
-Currently, two official plugins are available:
+A modern, professional, and fully responsive landing page for **J&D Carpet Cleaning** — a family-owned carpet and floor cleaning service based in Salinas, CA.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Built with clean code, smooth animations, and excellent user experience.
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Fully responsive design (Desktop + Mobile)
+- Smooth scroll navigation with active dot indicator
+- Beautiful fade-up and staggered animations
+- Hero section with slow zoom background effect
+- Mobile menu with clean full-screen overlay
+- Back to Top button
+- Reusable component architecture
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 18** + **Vite**
+- **Tailwind CSS**
+- **React Awesome Reveal** (Animations)
+- **clsx + tailwind-merge**
+- Modern component-based architecture
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone <git@github.com:Sprinters101/jd_cleaning.git>
+cd jd_cleaning
+```
