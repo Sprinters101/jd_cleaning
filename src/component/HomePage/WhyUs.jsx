@@ -12,19 +12,19 @@ const WhyUs = () => {
             subtitle: "Residential & commercial expertise",
         },
         {
-            id: 200,
+            id: 300,
             number: "02",
             title: "Family-Owned Business You Can Trust",
             subtitle: "James & Delmi built this on trust",
         },
         {
-            id: 300,
+            id: 600,
             number: "03",
             title: "Eco-Friendly & Professional",
             subtitle: "Green products, pro equipment",
         },
         {
-            id: 400,
+            id: 900,
             number: "04",
             title: "Bilingual Service",
             subtitle: "English and Spanish languages",

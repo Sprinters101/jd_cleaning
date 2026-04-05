@@ -37,14 +37,15 @@
     }
 }
 
-* {
-    /* border: 1px solid red; */
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: "Poppins", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    overflow-x: hidden;
 }
 
 .poltawski-nowy {
