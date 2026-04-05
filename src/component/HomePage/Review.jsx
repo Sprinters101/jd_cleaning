@@ -42,7 +42,7 @@ const Review = () => {
             <Container>
                 <div className="flex items-center justify-center gap-3.25 flex-col md:flex-row  ">
                     <div className="w-full order-2 md:order-1 flex justify-center flex-col gap-2.5 items-center md:items-stretch ">
-                        <Fade delay={100} duration={1000}>
+                        <Fade delay={100} duration={1000} triggerOnce>
                             <div className="md:flex md:justify-end">
                                 <ReviewCard
                                     data={reviewsData?.[0]}
@@ -50,7 +50,7 @@ const Review = () => {
                                 />
                             </div>{" "}
                         </Fade>
-                        <Fade delay={900} duration={2000}>
+                        <Fade delay={300} duration={2000} triggerOnce>
                             <div className="md:flex md:justify-start lg:-mt-8">
                                 <ReviewCard
                                     data={reviewsData?.[1]}
@@ -60,7 +60,7 @@ const Review = () => {
                         </Fade>
                     </div>
                     <div className=" max-w-99.5 text-center w-full shrink-0 order-1 md:order-2  ">
-                        <Fade delay={200} duration={1000}>
+                        <Fade delay={100} duration={1000} triggerOnce>
                             <>
                                 <Text
                                     variant="b1_semibold"
@@ -80,7 +80,7 @@ const Review = () => {
                     </div>
 
                     <div className="w-full  order-3 md:order-3  flex justify-center items-center md:items-stretch flex-col gap-2.5">
-                        <Fade delay={1900} duration={2000}>
+                        <Fade delay={400} duration={2000} triggerOnce>
                             <div className="md:flex md:justify-start">
                                 <ReviewCard
                                     data={reviewsData?.[2]}
@@ -88,7 +88,7 @@ const Review = () => {
                                 />
                             </div>{" "}
                         </Fade>
-                        <Fade delay={500} duration={2000}>
+                        <Fade delay={200} duration={2000} triggerOnce>
                             <div className="md:flex md:justify-end lg:-mt-8">
                                 <ReviewCard
                                     data={reviewsData?.[3]}

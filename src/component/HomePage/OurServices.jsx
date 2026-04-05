@@ -8,25 +8,25 @@ const OurServices = () => {
     const servicesData = [
         {
             id: 1,
-            duration: 0,
+            delay: 0,
             title: "Carpet Cleaning",
             desc: "Deep extraction and stain removal that restores the original texture and color of your carpets.",
         },
         {
             id: 2,
-            duration: 100,
+            delay: 200,
             title: "Upholstery & Furniture",
             desc: "Delicate treatment for your sofas, armchairs, and upholstery, refreshing your living space.",
         },
         {
             id: 3,
-            duration: 200,
+            delay: 400,
             title: "Tile & Grout",
             desc: "Restoring stubborn grime from tile surfaces in your kitchen and bathrooms.",
         },
         {
             id: 4,
-            duration: 300,
+            delay: 600,
             title: "Rug Cleaning",
             desc: "Removing tough stains from rugs to restore their vibrant colors and freshness to your living spaces.",
         },
@@ -56,42 +56,30 @@ const OurServices = () => {
                     </div>
                 </Slide>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 pt-5 md:pt-12 gap-6.75">
-                    {servicesData?.map(({ id, desc, title, duration }) => {
+                <div className=" overflow-hidden md:overflow-visible grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 pt-5 md:pt-12 gap-6.75">
+                    {servicesData?.map(({ id, desc, title }) => {
                         return (
-                            <Slide
-                                direction="up"
-                                delay={duration}
-                                duration={1000}
-                                fraction={0.1}
+                            <div
+                                className="group rounded-[1.25rem] max-w-[20rem] md:max-w-full mx-auto transition-all h-117.25 overflow-hidden relative"
+                                data-aos="slide-up"
+                                // data-aos-delay={delay}
+                                key={id}
                             >
-                                {/* <Fade
-                                    direction="up"
-                                    delay={duration}
-                                    duration={2000}
-                                    // fraction={0.1}
-                                > */}
-                                <div
-                                    className="group rounded-[1.25rem] max-w-[20rem] md:max-w-full mx-auto transition-all h-117.25 overflow-hidden relative"
-                                    key={id}
-                                >
-                                    <img
-                                        src={`/images/services/s_${id}.png`}
-                                        alt=""
-                                        className="w-full h-full object-cover scale-[1.1] group-hover:scale-[1] duration-700 transition-all"
-                                    />
-                                    <div className="h-31.5 w-full p-4  absolute  bottom-0 bg-dark/40 text-white ">
-                                        <Text variant="b2">{title}</Text>
-                                        <Text
-                                            variant="c1"
-                                            className="mt-1 text-grey-light"
-                                        >
-                                            {desc}
-                                        </Text>
-                                    </div>
+                                <img
+                                    src={`/images/services/s_${id}.png`}
+                                    alt=""
+                                    className="w-full h-full object-cover scale-[1.1] group-hover:scale-[1] duration-700 transition-all"
+                                />
+                                <div className="h-31.5 w-full p-4  absolute  bottom-0 bg-dark/40 text-white ">
+                                    <Text variant="b2">{title}</Text>
+                                    <Text
+                                        variant="c1"
+                                        className="mt-1 text-grey-light"
+                                    >
+                                        {desc}
+                                    </Text>
                                 </div>
-                                {/* </Fade> */}
-                            </Slide>
+                            </div>
                         );
                     })}
                 </div>
