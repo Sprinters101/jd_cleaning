@@ -96,13 +96,13 @@ const Contact = () => {
                             </Button>
                         </div>
 
-                        <Fade direction="up" style={{ overflow: "hidden" }}>
+                        <div data-aos="slide-up" style={{ overflow: "hidden" }}>
                             <img
                                 src="/images/cleaner.png"
                                 alt="cleaning tools"
                                 className=""
                             />
-                        </Fade>
+                        </div>
                     </div>
                 </div>
             </Container>

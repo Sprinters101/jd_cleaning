@@ -1,15 +1,14 @@
-import { Fade, Slide } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 import { cn } from "../../lib/utils";
 import Container from "../common/Container";
 import Text from "../common/Text";
-import Button from "../ui/Button";
 
 const OurGallery = () => {
     const data = [
-        { id: 1, direction: "left", delay: 0 },
-        { id: 2, direction: "down", delay: 200 },
-        { id: 3, direction: "up", delay: 300 },
-        { id: 4, direction: "right", delay: 400 },
+        { id: 1, direction: "fade-left", delay: 0 },
+        { id: 2, direction: "fade-down", delay: 200 },
+        { id: 3, direction: "fade-up", delay: 300 },
+        { id: 4, direction: "fade-right", delay: 400 },
     ];
     return (
         <div className="py-8 md:py-26">
@@ -35,29 +34,24 @@ const OurGallery = () => {
                 </Slide>
                 <div className="mt-15.5">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6.75 overflow-hidden">
-                        {data?.map(({ id, direction, delay }) => {
+                        {data?.map(({ id, direction }) => {
                             return (
-                                <Slide
+                                <div
+                                    // duration={1000}
+                                    // delay={delay}
+                                    // direction={direction}
+                                    data-aos={direction}
                                     key={id}
-                                    duration={1000}
-                                    delay={delay}
-                                    direction={direction}
                                 >
-                                    <Fade
-                                        duration={1000}
-                                        delay={delay}
-                                        direction={direction}
-                                    >
-                                        <img
-                                            src={`/images/gallery/g_${id}.png`}
-                                            alt=""
-                                            className={cn(
-                                                "block  mx-auto",
-                                                id % 2 === 0 && "md:mt-10.5",
-                                            )}
-                                        />
-                                    </Fade>
-                                </Slide>
+                                    <img
+                                        src={`/images/gallery/g_${id}.png`}
+                                        alt=""
+                                        className={cn(
+                                            "block  mx-auto",
+                                            id % 2 === 0 && "md:mt-10.5",
+                                        )}
+                                    />
+                                </div>
                             );
                         })}
                     </div>
