@@ -147,7 +147,7 @@ const Navbar = () => {
 
             {/* Bottom Slide-up Drawer for Mobile */}
             {isOpen && (
-                <div className="fixed top-18  h-fit inset-0 bg-white z-60 md:hidden flex flex-col">
+                <div className="fixed top-18 w-full max-w-[18.4375rem]  h-fit inset-0 bg-white z-60 md:hidden flex flex-col">
                     {/* Header with Logo and Close Button */}
 
                     {/* Navigation Links */}
