@@ -11,6 +11,7 @@ import Review from "./component/HomePage/Review";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import BackToTop from "./component/common/BackToTop";
 
 function App() {
     useEffect(() => {
@@ -36,6 +37,7 @@ function App() {
             <Review />
             <Contact />
             <Footer />
+            <BackToTop />
         </>
     );
 }
