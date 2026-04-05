@@ -67,7 +67,7 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
     return (
-        <Slide direction="down" triggerOnce>
+        <>
             {/* Main Navbar */}
             <nav className="bg-white sticky top-0 z-50">
                 <Container>
@@ -115,14 +115,18 @@ const Navbar = () => {
                             >
                                 <Button icon={"phone"}>(831) 682-6739</Button>
                             </a>
-
-                            <Button
-                                variant="primary"
-                                className="px-8"
-                                icon={"arrow"}
+                            <a
+                                href="https://book.housecallpro.com/book/JD-Carpet-Cleaning/33f42e0783124ccabd67d76c7940b7b2?v2=true&fbclid=PAVERFWAQvW9xleHRuA2FlbQIxMABzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaetpnX6Tnw6cfc6RaxIY2nd5MqhVXNJXlesf62Zf4hmu-lz29u_XqrXQqBBxw_aem_ikpqsf8O91oFZlEiVrUCng"
+                                target="_blank"
                             >
-                                Book us Now
-                            </Button>
+                                <Button
+                                    variant="primary"
+                                    className="px-8"
+                                    icon={"arrow"}
+                                >
+                                    Book us Now
+                                </Button>
+                            </a>
                         </div>
 
                         {/* Mobile Hamburger */}
@@ -169,16 +173,21 @@ const Navbar = () => {
 
                     {/* Footer Actions */}
                     <div className="p-6  space-y-4">
-                        <Button
-                            variant="primary"
-                            size="lg"
-                            className="w-full py-1.5 rounded-full flex items-center justify-center gap-2"
-                            onClick={() => setIsOpen(false)}
-                            icon={"arrow"}
-                            isInverse={true}
+                        <a
+                            href="https://book.housecallpro.com/book/JD-Carpet-Cleaning/33f42e0783124ccabd67d76c7940b7b2?v2=true&fbclid=PAVERFWAQvW9xleHRuA2FlbQIxMABzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaetpnX6Tnw6cfc6RaxIY2nd5MqhVXNJXlesf62Zf4hmu-lz29u_XqrXQqBBxw_aem_ikpqsf8O91oFZlEiVrUCng"
+                            target="_blank"
                         >
-                            Book us Now
-                        </Button>
+                            <Button
+                                variant="primary"
+                                size="lg"
+                                className="w-full py-1.5 rounded-full flex items-center justify-center gap-2"
+                                onClick={() => setIsOpen(false)}
+                                icon={"arrow"}
+                                isInverse={true}
+                            >
+                                Book us Now
+                            </Button>
+                        </a>
 
                         <div className="flex items-center justify-center gap-4">
                             <a
@@ -191,7 +200,7 @@ const Navbar = () => {
                     </div>
                 </div>
             )}
-        </Slide>
+        </>
     );
 };
 

@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal";
 
 const OurStory = () => {
     return (
-        <div className="pb-8 md:pb-26">
+        <div className="pb-8 md:pb-26" id="about">
             <Container className="flex items-center justify-center gap-8 md:gap-27.75 lg:gap-27.75 md:flex-row flex-col">
                 <Fade direction="left">
                     <div className="max-w-134.25 w-full text-center md:text-left">

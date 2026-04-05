@@ -33,7 +33,7 @@ const OurServices = () => {
     ];
 
     return (
-        <div className="pb-8 md:pb-26">
+        <div className="pb-8 md:pb-26 pt-8 md:pt-26 " id="services">
             <Container>
                 <Slide direction="left">
                     <div className="text-center md:text-left">
@@ -88,9 +88,14 @@ const OurServices = () => {
                     duration={1000}
                     className="md:mt-12 mt-5 flex items-center justify-center"
                 >
-                    <Button variant="primary" icon={"arrow"}>
-                        Get a Free Quote Today
-                    </Button>
+                    <a
+                        href="https://book.housecallpro.com/book/JD-Carpet-Cleaning/33f42e0783124ccabd67d76c7940b7b2?v2=true&fbclid=PAVERFWAQvW9xleHRuA2FlbQIxMABzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaetpnX6Tnw6cfc6RaxIY2nd5MqhVXNJXlesf62Zf4hmu-lz29u_XqrXQqBBxw_aem_ikpqsf8O91oFZlEiVrUCng"
+                        target="_blank"
+                    >
+                        <Button variant="primary" icon={"arrow"}>
+                            Get a Free Quote Today
+                        </Button>
+                    </a>
                 </Fade>
             </Container>
         </div>

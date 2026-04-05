@@ -6,7 +6,7 @@ import Features from "./Features";
 
 const Hero = () => {
     return (
-        <div className="relative pb-8 md:pb-26">
+        <div className="relative" id="home">
             <Container padding className="overflow-hidden">
                 <div
                     className={`overflow-hidden bg-[linear-gradient(98.33deg,rgba(0,66,107,0.6)_5.16%,rgba(102,102,102,0)_92.95%),url('/images/hero.png')] bg-cover bg-center md:bg-center  bg-no-repeat  rounded-[2.5rem]  flex items-center px-6 md:px-16 pt-29.5 md:pt-54 pb-38.75 md:pb-44.25 text-white border border-blue-normal animate-slow-zoom`}
@@ -51,20 +51,27 @@ const Hero = () => {
                                 </Text>
 
                                 <div className="mt-8 md:mt-16 flex flex-col md:flex-row  md:items-center gap-4">
-                                    <Button
-                                        variant="primary"
-                                        className="md:px-8 w-full max-w-40.75 md::w-fit md:max-w-fit"
-                                        icon={"arrow"}
+                                    <a
+                                        href="https://book.housecallpro.com/book/JD-Carpet-Cleaning/33f42e0783124ccabd67d76c7940b7b2?v2=true&fbclid=PAVERFWAQvW9xleHRuA2FlbQIxMABzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaetpnX6Tnw6cfc6RaxIY2nd5MqhVXNJXlesf62Zf4hmu-lz29u_XqrXQqBBxw_aem_ikpqsf8O91oFZlEiVrUCng"
+                                        target="_blank"
                                     >
-                                        Get a Free Quote
-                                    </Button>
-                                    <Button
-                                        variant="outline"
-                                        className="md:px-8 w-full max-w-40.75 md::w-fit md:max-w-fit"
-                                        icon={"arrow"}
-                                    >
-                                        View Services
-                                    </Button>
+                                        <Button
+                                            variant="primary"
+                                            className="md:px-8 w-full max-w-40.75 md::w-fit md:max-w-fit"
+                                            icon={"arrow"}
+                                        >
+                                            Get a Free Quote
+                                        </Button>
+                                    </a>
+                                    <a href="#services">
+                                        <Button
+                                            variant="outline"
+                                            className="md:px-8 w-full max-w-40.75 md::w-fit md:max-w-fit"
+                                            icon={"arrow"}
+                                        >
+                                            View Services
+                                        </Button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

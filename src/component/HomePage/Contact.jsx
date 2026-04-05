@@ -26,7 +26,7 @@ const Contact = () => {
         },
     ];
     return (
-        <div className="py-8 md:py-26">
+        <div className="py-8 md:py-26" id="contact">
             <Container className="overflow-hidden">
                 <div
                     className={cn(
@@ -77,9 +77,17 @@ const Contact = () => {
                                     })}
                                 </div>
                                 <div className="mt-10 hidden md:block ">
-                                    <Button variant="primary" icon={"arrow"}>
-                                        Get a Free Quote Today
-                                    </Button>
+                                    <a
+                                        href="https://book.housecallpro.com/book/JD-Carpet-Cleaning/33f42e0783124ccabd67d76c7940b7b2?v2=true&fbclid=PAVERFWAQvW9xleHRuA2FlbQIxMABzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaetpnX6Tnw6cfc6RaxIY2nd5MqhVXNJXlesf62Zf4hmu-lz29u_XqrXQqBBxw_aem_ikpqsf8O91oFZlEiVrUCng"
+                                        target="_blank"
+                                    >
+                                        <Button
+                                            variant="primary"
+                                            icon={"arrow"}
+                                        >
+                                            Get a Free Quote Today
+                                        </Button>
+                                    </a>
                                 </div>
                             </>
                         </Fade>
@@ -91,9 +99,14 @@ const Contact = () => {
                         )}
                     >
                         <div className="mt-7.75 flex md:hidden items-center justify-center">
-                            <Button variant="primary" icon={"arrow"}>
-                                Get a Free Quote Today
-                            </Button>
+                            <a
+                                href="https://book.housecallpro.com/book/JD-Carpet-Cleaning/33f42e0783124ccabd67d76c7940b7b2?v2=true&fbclid=PAVERFWAQvW9xleHRuA2FlbQIxMABzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaetpnX6Tnw6cfc6RaxIY2nd5MqhVXNJXlesf62Zf4hmu-lz29u_XqrXQqBBxw_aem_ikpqsf8O91oFZlEiVrUCng"
+                                target="_blank"
+                            >
+                                <Button variant="primary" icon={"arrow"}>
+                                    Get a Free Quote Today
+                                </Button>
+                            </a>
                         </div>
 
                         <div data-aos="slide-up" style={{ overflow: "hidden" }}>

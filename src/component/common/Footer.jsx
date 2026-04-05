@@ -66,7 +66,11 @@ const Footer = () => {
                                     (service, index) => (
                                         <a
                                             key={index}
-                                            href="#jdkd"
+                                            href={
+                                                service === "Our Story"
+                                                    ? "#about"
+                                                    : "#contact"
+                                            }
                                             className="text-grey hover:text-blue-600 transition-colors duration-200 text-[15px]"
                                         >
                                             {service}
