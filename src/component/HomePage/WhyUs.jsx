@@ -15,7 +15,7 @@ const WhyUs = () => {
             id: 300,
             number: "02",
             title: "Family-Owned Business You Can Trust",
-            subtitle: "James & Delmi built this on trust",
+            subtitle: "James & Delmy built this on trust",
         },
         {
             id: 600,

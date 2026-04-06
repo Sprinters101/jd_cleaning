@@ -17,13 +17,13 @@ const OurStory = () => {
                             OUR STORY
                         </Text>
                         <Text variant="h2" className="text-neutral mt-2">
-                            Meet James & Delmi
+                            Meet James & Delmy
                         </Text>
                         <Text
                             variant="b1_regular"
                             className="text-neutral mt-2 md:mt-8 text-xs md:text-[1.1875rem]"
                         >
-                            Founded by James and Delmi, J&D Carpet Cleaning was
+                            Founded by James and Delmy, J&D Carpet Cleaning was
                             born from years of hands-on experience in the carpet
                             cleaning industry and a shared dream to build a
                             family business that values quality, trust, and

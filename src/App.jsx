@@ -18,10 +18,7 @@ function App() {
     useEffect(() => {
         AOS.init({
             duration: 1000, // animation duration in ms (default: 400)
-            //   once: true,         // whether animation should happen only once
-            // offset: 120,     // offset (in px) from the original trigger point
-            // easing: 'ease',  // easing function
-            // delay: 100,
+             
         });
 
         // Optional: refresh AOS when content changes dynamically
